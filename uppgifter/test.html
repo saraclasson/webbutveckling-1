@@ -5,18 +5,18 @@
 <title>Boll som studsar</title>
 <style>
 #plan {
-	border: 2px solid green;
-	width:400px;
-	height: 300px;
+	border: 10px pink double;
+	width:600px;
+	height: 500px;
 	position: absolute;
 	left: 100px;
 	top: 100px;
 }
 #boll {
-	background-color: red;
+	background-color: black;
 	border-radius: 50%;
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -29,14 +29,14 @@
 </div>
 <script>
 var boll = document.getElementById("boll");
-var xSpeed = 4;
-var ySpeed = 2;
+var xSpeed = 10;
+var ySpeed = 10;
 var x = 10;
 var y = 30;
 function moveBall () {
-	if (x > 380 || x < 1) { xSpeed = -xSpeed; 
+	if (x > 580 || x < 1) { xSpeed = -xSpeed; 
 	}
-	if (y > 280 || y < 1 ) {
+	if (y > 480 || y < 1 ) {
 		ySpeed = -ySpeed;
 	}
 	x = x + xSpeed;
