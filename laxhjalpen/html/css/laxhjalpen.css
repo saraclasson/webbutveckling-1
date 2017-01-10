@@ -10,13 +10,116 @@ html {
 body {
     margin: auto;
     max-width: 860px;
-    /* Lägg till deklarationer här */
+    font-family: sans-serif;
+    font-size: 100%;
 }
-/*
-section, header, footer, nav, div[role=main] {
-    outline: 1px solid red;
+
+ header {
+    text-align: center;
+ }
+
+ .startpage h1 {
+    font-size: 500%;
+     }
+
+ .tagline { 
+    font-size: 120%;
+    padding: 0.5em;
+    border-top: 3px double #00AF64;
+    border-bottom: 3px double #00AF64;
+    margin: 1em 0;
+  }
+
+  .menu > h2 {
+    margin: 0 0 1em;
+    padding: 2em 0;
+    background-color: #F5F5F5;
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 3 em;
+    text-align: center;
+    color: #999;
+  }
+
+  .startpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
-*/
+
+.startpage header,
+.startpage footer {
+
+    flex: 0 0 100%;
+}
+
+.startpage section {
+    flex: 0 0 22%;
+}
+
+html {
+    margin 2%;
+}
+
+.menu a:link,
+.menu a:visited {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.menu a:focus,
+.menu a:hover {
+    text-decoration: underline;
+    color: #A62F00;
+}
+
+.menu a:active {
+    text-decoration: underline;
+    color: #FF4900;
+}
+
+.menu h2 {
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'Merienda One', Cursive;
+}
+
+.menu h2 {
+    font-family: 'Merienda One', Cursive;
+}
+
+body {
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
+}
+
+h1::first-letter {
+    color: #00AF64;
+}
+
+.startpage .logo {
+    width: 235px;
+    height: 198px;
+}
+
+.hwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hwrap > a {
+    margin-right: 30px;
+}
+
+
 /*
 ==================================================================================
 Rules for reusable components

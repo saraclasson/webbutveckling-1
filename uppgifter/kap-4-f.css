@@ -2,9 +2,51 @@ html {
     background-color: lightslategrey;
 }
 body {
+	background-color: azure;
+	font-family: sans-serif;
     margin: auto;
     max-width: 500px;
     padding-bottom: 0.1px; /*knep för div margin */
 }
 h1 {
+	text-align: center;
+	color: purple;
 }
+div {
+	border: 1px solid;
+	color: purple;
+	margin: 5px;
+	border-radius: 5px;
+
+}
+
+#billy {
+	color: darkred;
+}
+
+.two {
+	font-size: larger;
+}
+
+.three {
+	font-size: smaller;
+
+}
+.three + p {
+	font-weight: bolder;
+}
+#bob {
+	color:darkgreen;
+
+}
+
+.two + p + p {
+	margin: justify;
+}
+#bob a {
+	text-decoration: line-through;
+}
+#bob > .two > a {
+	text-decoration: underline overline;
+}
+
