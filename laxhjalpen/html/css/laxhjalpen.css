@@ -28,22 +28,35 @@ body {
     border-top: 3px double #00AF64;
     border-bottom: 3px double #00AF64;
     margin: 1em 0;
-  }
+}
 
-  .menu > h2 {
+.menu > li,
+.menu > h2 {
     margin: 0 0 1em;
     padding: 2em 0;
     background-color: #F5F5F5;
     text-align: center;
-  }
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+}
 
-  footer {
+.menu {
+    margin: 1em 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 0 1rem;
+    list-style: none;
+}
+
+footer {
     margin-top: 3 em;
-    text-align: center;
+    text-align: center;§
     color: #999;
-  }
+}
 
-  .startpage {
+.startpage {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -82,10 +95,6 @@ html {
     color: #FF4900;
 }
 
-.menu h2 {
-    box-shadow: inset 0 0 20px #007241;
-    border-radius: 50%;
-}
 
 h1 {
     font-family: 'Merienda One', Cursive;
@@ -126,6 +135,41 @@ Rules for reusable components
 ==================================================================================
 */
 
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px; 
+}
+
+article {
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 3px double #00AF64;
+}
+
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0; 
+}
+
+figure {
+    float: left;
+    margin: 0;
+}
+
+figcaption {
+    font: italic bolder 110% sans-serif;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+
+article p {
+    margin-left: 140px;
+    hyphens: auto;
+}
+
+
 /* dborder ska vara här - avsnitt 11.7 */
 
 /*
@@ -163,11 +207,36 @@ Start page rules
 
 /* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
 
-/*
-==================================================================================
-Subpages
-==================================================================================
-*/
+.subpage .logo {
+    width: 146px;
+    height: 123px;
+}
+
+.subpage h1 {
+    font-size: 2.6rem;
+}
+h1 > span {
+    color: #A62F00;
+}
+
+.subpage .hwrap {
+    justify-content: space-between;
+}
+
+.subpage .hwrap > a,
+
+nav {
+    flex: 0 1 20%;
+    min-width: 146px;
+    margin-right: 10px;
+    outline: 1px solid;
+}
+
+.subpage .hwrap > h1,
+div[role=main] {
+    flex: 1 1 300px;
+}
+
 
 /* TODO Avsnitt 11.4.1, 11.6,  */
 
