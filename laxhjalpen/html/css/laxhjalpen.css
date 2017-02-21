@@ -10,15 +10,94 @@ html {
 body {
     margin: auto;
     max-width: 860px;
-    font-family: sans-serif;
     font-size: 100%;
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
 }
 
- header {
+
+ 
+
+ body > header
+ body > footer {
+
+ }
+
+ 
+
+
+
+
+
+.startpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+
+    flex: 0 0 100%;
+}
+
+
+
+
+
+.menu h2 {
+    font-family: 'Merienda One', cursive;
+}
+
+
+
+
+
+
+
+/*
+==================================================================================
+Rules for reusable components
+==================================================================================
+*/
+
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px; 
+}
+
+
+
+/* dborder ska vara här - avsnitt 11.7 */
+
+/*
+==================================================================================
+Page header, all pages
+==================================================================================
+*/
+header {
     text-align: center;
  }
 
- .startpage h1 {
+.hwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hwrap > a {
+    margin-right: 30px;
+}
+
+h1 {
+    font-family: 'Merienda One', cursive;
+}
+
+h1::first-letter {
+    color: #00AF64;
+}
+
+.startpage h1 {
     font-size: 500%;
      }
 
@@ -29,7 +108,24 @@ body {
     border-bottom: 3px double #00AF64;
     margin: 1em 0;
 }
+/*
+==================================================================================
+Page footer rules
+==================================================================================
+*/
 
+footer {
+    margin-top: 2em;
+    text-align: center;
+    color: #999;
+}
+/* TODO Avsnitt 5.2 */
+
+/*
+==================================================================================
+Main site navigation
+==================================================================================
+*/
 .menu > li,
 .menu > h2 {
     margin: 0 0 1em;
@@ -40,6 +136,10 @@ body {
     border-radius: 50%;
 }
 
+.menu a {
+    display: block;
+}
+
 .menu {
     margin: 1em 0;
     padding: 0;
@@ -48,33 +148,6 @@ body {
 .menu li {
     margin: 0 0 1rem;
     list-style: none;
-}
-
-footer {
-    margin-top: 3 em;
-    text-align: center;§
-    color: #999;
-}
-
-.startpage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.startpage header,
-.startpage footer {
-
-    flex: 0 0 100%;
-}
-
-.startpage section {
-    flex: 0 0 22%;
-}
-
-html {
-    margin 2%;
 }
 
 .menu a:link,
@@ -95,49 +168,64 @@ html {
     color: #FF4900;
 }
 
+/* Alla regler för .menu med relaterade element */
 
-h1 {
-    font-family: 'Merienda One', Cursive;
-}
+/* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
 
-.menu h2 {
-    font-family: 'Merienda One', Cursive;
-}
 
-body {
-    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
-}
-
-h1::first-letter {
-    color: #00AF64;
-}
-
+/*
+==================================================================================
+Start page rules
+==================================================================================
+*/
 .startpage .logo {
     width: 235px;
     height: 198px;
 }
 
-.hwrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.startpage section {
+    flex: 0 0 22%;
 }
 
-.hwrap > a {
-    margin-right: 30px;
+/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
+
+/* Subpages */
+
+.subpage .hwrap > a,
+
+nav {
+    flex: 0 1 20%;
+    min-width: 146px;
+    margin-right: 10px;
+   
+}
+
+.subpage .logo {
+    width: 146px;
+    height: 123px;
+}
+
+.subpage .hwrap > h1,
+div[role=main] {
+    flex: 1 1 300px;
 }
 
 
-/*
-==================================================================================
-Rules for reusable components
-==================================================================================
-*/
+.subpage h1 {
+    font-size: 2.6rem;
+}
+h1 > span {
+    color: #A62F00;
+}
 
-.dborder {
-    border: 1px solid #ccc;
-    padding: 5px; 
+.subpage .hwrap {
+    justify-content: space-between;
+
+}
+
+.subpage h2 {
+    text-align: center;
+    
 }
 
 article {
@@ -170,72 +258,7 @@ article p {
 }
 
 
-/* dborder ska vara här - avsnitt 11.7 */
 
-/*
-==================================================================================
-Page header, all pages
-==================================================================================
-*/
-header {
-    /* text-align: center; */
-}
-/*
-==================================================================================
-Page footer rules
-==================================================================================
-*/
-
-/* TODO Avsnitt 5.2 */
-
-/*
-==================================================================================
-Main site navigation
-==================================================================================
-*/
-
-/* Alla regler för .menu med relaterade element */
-
-/* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
-
-
-/*
-==================================================================================
-Start page rules
-==================================================================================
-*/
-
-/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
-
-.subpage .logo {
-    width: 146px;
-    height: 123px;
-}
-
-.subpage h1 {
-    font-size: 2.6rem;
-}
-h1 > span {
-    color: #A62F00;
-}
-
-.subpage .hwrap {
-    justify-content: space-between;
-}
-
-.subpage .hwrap > a,
-
-nav {
-    flex: 0 1 20%;
-    min-width: 146px;
-    margin-right: 10px;
-    outline: 1px solid;
-}
-
-.subpage .hwrap > h1,
-div[role=main] {
-    flex: 1 1 300px;
-}
 
 
 /* TODO Avsnitt 11.4.1, 11.6,  */
@@ -245,6 +268,32 @@ div[role=main] {
 Tables
 ==================================================================================
 */
+table {
+}
+
+thead {
+}
+
+th, td {
+}
+
+th {
+}
+
+th:not(:last-child) {
+}
+
+td {
+}
+
+tr:target {
+}
+
+tr:hover {
+}
+
+tr {
+}
 
 /* TODO Avsnitt 12.3 */
 
@@ -253,7 +302,8 @@ Tables
 Nivo Slider
 ==================================================================================
 */
-
+.nivo-caption {
+}
 /* TODO Avsnitt 14.7.4 */
 
 /*
@@ -293,7 +343,7 @@ label {
     padding-right: 0;
 }
 
-input[type=text];
+input[type=text],
 input[type =email],
 textarea {
     flex: 1 1 25ch;
@@ -305,7 +355,7 @@ textarea {
     resize: vertical;
 }
 
-input[type"submit] {
+input[type="submit"] {
     display: block;
     margin: auto;
 }
@@ -330,6 +380,18 @@ Adaptive design
     .hwrap > a {
         margin-right: 25px;
     }
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 550px) {
+}
+/* 475 px was a breakpoint for flex design on subpages */
+@media (max-width: 476px) {
+}
+
+@media (max-width: 380px) {
+}
     /* Lägg till regler enligt kapitel 15 */
 }
 
